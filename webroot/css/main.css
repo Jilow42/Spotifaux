@@ -1,0 +1,187 @@
+:root{
+    --maincolor : #f4b042;
+    --error : #e03131;
+    --success : #27b52a;
+    --warning : #3f89ff;
+}
+html{
+    height: 100%;
+    font-size: 14px;
+    font-family: Verdana, Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+body{
+    min-height: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr; /* 250px + "largeur restante" */
+  grid-template-rows: 1fr;
+}
+header {
+  grid-column: 1; grid-row: 1;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  grid-column: 2; grid-row: 1;
+  padding: 20px;
+  position: relative;
+}
+header h1{
+    padding: 20px;
+    background: var(--maincolor);
+    text-align: center;
+    font-size: 1.2rem;
+}
+header h1 a{
+    color: #000;
+    font-weight: normal;
+}
+header h1 a{
+
+    color: #fff;
+}
+nav{
+
+    padding: 20px;
+}
+nav > *{
+    padding: 10px;
+    text-decoration: none;
+    color: var(--maincolor);
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px solid var(--maincolor);
+}
+nav > *:last-child{
+    border-bottom: none;
+}
+header .hello{
+    font-style: italic;
+    font-size: 0.9rem;
+    border-top: 1px solid #fff;
+    color: #fff;
+    padding: 20px;
+}
+nav a.active{
+    color: #fff;
+}
+main > h1:first-child{
+    font-size: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+main h1{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+main h2{
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+label,
+.label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+p,
+figure,
+form,
+div.input{
+    margin-bottom: 20px;
+}
+button,
+.button{
+    text-decoration: none;
+    background: var(--warning);
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+}
+input,
+textarea{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.messages{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.message{
+    width: 100%;
+    background: #66a1ff;
+    color: #000;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.message.success{
+    background: #3aad44;
+}
+.message.error{
+    background: #cc2e2e;
+    color: #fff;
+}
+.message.hidden{
+    display: none;
+}
+
+figure{
+    position: relative;
+    max-width: 500px;
+}
+figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background:rgba(0,0,0,.6);
+    color: #fff;
+    transition: all 0.5s;
+}
+figure:hover figcaption{
+    opacity: 0.5;
+}
+table{
+    
+}
+thead tr{
+    border-bottom: 1px solid #000;
+}
+th, td{
+    padding: 4px 8px;
+}
+tbody tr{
+    border-bottom: 1px solid var(--maincolor);
+}
+tbody tr:last-child{
+    border-bottom: none;
+}
+.list{
+    list-style: inside disc;
+}
+.commentaire{
+    background: #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.commentaire .infos{
+    border-bottom: 1px solid var(--maincolor);
+}
